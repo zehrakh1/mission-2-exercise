@@ -1,0 +1,197 @@
+@import url("https://fonts.cdnfonts.com/css/seven-segment");
+@import url("https://fonts.cdnfonts.com/css/dj-moo");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-image: url(https://www.ft.com/__origami/service/image/v2/images/raw/http%3A%2F%2Fcom.ft.imagepublish.upp-prod-eu.s3.amazonaws.com%2Fabefdd70-3bb2-11ea-b84f-a62c46f39bc2?source=next-article&fit=scale-down&quality=highest&width=700&dpr=1);
+  /* object-fit: cover; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  /* position: relative; */
+  height: 100vh;
+}
+
+.calculator {
+  padding: 20px;
+  background-image: url(https://i.pinimg.com/originals/29/06/97/29069783a95b87a7fb35b1cb5eff263d.webp);
+  width: fit-content;
+  border-radius: 10%;
+  border: 3px solid black;
+  margin-bottom: 20px;
+}
+
+.digit {
+  border: solid rgb(255, 136, 154);
+  width: 50px;
+  height: 50px;
+  background-color: lightpink;
+  border-radius: 20%;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  color: #fff;
+  margin: 5px;
+}
+
+.operator {
+  border: solid 3px rgb(0, 0, 0);
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20%;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  font-size: 30px;
+  color: black;
+  margin: 5px;
+}
+
+.operator:hover {
+  background-color: rgb(237, 237, 255);
+}
+
+.operator:active {
+  background-color: rgb(181, 181, 185);
+}
+
+.digit:hover {
+  background-color: rgb(251, 202, 210);
+}
+
+.digit:active {
+  /* change the background color when clicked */
+  background-color: rgb(223, 149, 160);
+}
+
+#clearCalc {
+  background-color: red;
+  border: 3px solid rgb(143, 0, 0);
+  color: white;
+}
+
+#clearCalc:hover {
+  background-color: rgb(255, 78, 78);
+}
+
+#clearCalc:active {
+  background-color: rgb(186, 1, 1);
+}
+
+#equals {
+  background-color: green;
+  color: white;
+  border: solid 3px rgb(0, 61, 0);
+}
+
+#equals:hover {
+  background-color: rgb(28, 156, 28);
+}
+
+#equals:active {
+  background-color: rgb(2, 93, 2);
+}
+
+.pointer:hover {
+  cursor: pointer;
+}
+
+.row {
+  margin: 10px;
+  text-align: center;
+}
+
+#result {
+  width: 300px;
+  height: 50px;
+  background-color: lightpink;
+  border: 3px solid rgb(255, 136, 154);
+  color: white;
+  font-size: 60px;
+  text-align: right;
+  margin-bottom: 10px;
+  padding: 25px 10px;
+  font-family: "Seven Segment", sans-serif;
+}
+
+.title {
+  text-align: center;
+  font-family: "dj moo", sans-serif;
+  color: lightpink;
+  font-size: 26px;
+  /* text-shadow: 0px 0px 20px rgb(255, 136, 154); */
+  padding: 0 0 20px;
+}
+
+/* jumpscare */
+#jumpscare {
+  position: fixed;
+  opacity: 0;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* opens the jumpscare content */
+#jumpscare.open {
+  opacity: 1;
+  z-index: 99999;
+}
+
+#open-button {
+  cursor: pointer;
+  font-size: 200px;
+  padding: 40px;
+  border: none;
+  border-radius: 30px;
+  background-image: url(https://i.pinimg.com/originals/29/06/97/29069783a95b87a7fb35b1cb5eff263d.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: lightpink;
+  transition: 1s;
+}
+
+#jumpscare img {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+#open-button:hover {
+  color: red;
+  transform: scale(1.1);
+  transition: 1s;
+}
+
+#close-button {
+  position: fixed;
+  top: 0%;
+  right: 2%;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 200px;
+  color: white;
+  transition: 1s;
+}
+
+#close-button:hover {
+  color: rgb(112, 0, 0);
+  transform: scale(1.1);
+  transition: 1s;
+}

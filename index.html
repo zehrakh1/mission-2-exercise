@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!----------- calculator ------------->
+    <section class="calculator">
+      <h2 class="title">COWCOOLATER</h2>
+      <section class="row">
+        <!-- result box - disabled so cant type inside -->
+        <input type="number" id="result" value="07734" disabled />
+      </section>
+      <!-- keys on the calculator -->
+      <section class="row">
+        <button class="digit pointer" data-value="1">1</button>
+        <button class="digit pointer" data-value="2">2</button>
+        <button class="digit pointer" data-value="3">3</button>
+        <button class="operator pointer" id="add" data-value="+">+</button>
+      </section>
+      <section class="row">
+        <button class="digit pointer" data-value="4">4</button>
+        <button class="digit pointer" data-value="5">5</button>
+        <button class="digit pointer" data-value="6">6</button>
+        <button class="operator pointer" id="subtract" data-value="-">-</button>
+      </section>
+      <section class="row">
+        <button class="digit pointer" data-value="7">7</button>
+        <button class="digit pointer" data-value="8">8</button>
+        <button class="digit pointer" data-value="9">9</button>
+        <button class="operator pointer" id="multiply" data-value="*">*</button>
+      </section>
+      <section class="row">
+        <button class="operator pointer" id="clearCalc" data-value="C">
+          C
+        </button>
+        <button class="digit pointer" data-value="0">0</button>
+        <button class="operator pointer" id="equals" data-value="=">=</button>
+        <button class="operator pointer" id="divide" data-value="/">/</button>
+      </section>
+    </section>
+    <!----------------- jumpscare ---------------->
+    <!-- will play the 'scream' when clicked -->
+    <button id="open-button" onclick="audio.play();">Don't click</button>
+    <div id="jumpscare">
+      <img
+        src="https://i.ytimg.com/vi/6LvvWAx89YY/maxresdefault.jpg"
+        alt="scary cow"
+      />
+      <!-- "x" symbol -->
+      <button id="close-button">&times;</button>
+    </div>
+  </body>
+</html>
